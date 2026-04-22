@@ -7,105 +7,20 @@ import Base from '../layouts/Base.astro';
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
-    <div class="container hero-layout">
-      <div class="hero-inner">
-        <div class="hero-tag">Synthetic data, honestly built</div>
-        <h1>
-          Synthetic UK primary-care data
-          <span class="accent-text">you can defend.</span>
-        </h1>
-        <p class="hero-lead">
-          Rhysora generates realistic, fully-synthetic patient records for research,
-          testing, and methodology development. Every value traces to a published
-          source. Every dataset is reproducible by anyone with the same settings.
-        </p>
-        <div class="hero-actions">
-          <a href="/products" class="btn">See the data →</a>
-          <a href="/methodology" class="btn btn-ghost">How it works</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="provenance-svg">
-          <defs>
-            <!-- Small hexagon (source + output marker), 36px wide -->
-            <symbol id="hex-sm" viewBox="-20 -20 40 40">
-              <polygon points="0,-18 15.5,-9 15.5,9 0,18 -15.5,9 -15.5,-9"
-                fill="currentColor" />
-            </symbol>
-            <!-- Large hexagon for central node, 72px wide -->
-            <symbol id="hex-lg" viewBox="-40 -40 80 80">
-              <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18"
-                fill="currentColor" />
-            </symbol>
-            <symbol id="hex-lg-outline" viewBox="-40 -40 80 80">
-              <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18"
-                fill="none" stroke="currentColor" stroke-width="2" />
-            </symbol>
-          </defs>
-
-          <!-- Connection lines: sources (left) to centre -->
-          <line x1="85" y1="90" x2="228" y2="200" class="line" />
-          <line x1="85" y1="200" x2="214" y2="200" class="line" />
-          <line x1="85" y1="310" x2="228" y2="200" class="line" />
-
-          <!-- Connection lines: centre to outputs (right) -->
-          <line x1="286" y1="200" x2="400" y2="110" class="line" />
-          <line x1="286" y1="200" x2="400" y2="175" class="line" />
-          <line x1="286" y1="200" x2="400" y2="240" class="line" />
-          <line x1="286" y1="200" x2="400" y2="305" class="line" />
-
-          <!-- Source hexagons (left) - small, muted grey -->
-          <g style="color: #475569;">
-            <use href="#hex-sm" x="70" y="90" />
-            <use href="#hex-sm" x="70" y="200" />
-            <use href="#hex-sm" x="70" y="310" />
-          </g>
-
-          <!-- Central Rhysora hexagon - large, teal outline + dark fill -->
-          <g class="central-node">
-            <!-- Soft halo behind the hex (for pulse glow) -->
-            <circle cx="250" cy="200" r="48" fill="#2dd4bf"
-              class="central-halo" />
-            <!-- Dark fill (matches site background) -->
-            <g style="color: #0a0e1a;">
-              <use href="#hex-lg" x="250" y="200" />
-            </g>
-            <!-- Teal outline -->
-            <g style="color: #2dd4bf;">
-              <use href="#hex-lg-outline" x="250" y="200" />
-            </g>
-          </g>
-
-          <!-- Output record cards (right) -->
-          <g>
-            <rect x="400" y="95"  width="72" height="32" rx="4"
-              fill="#1a2234" stroke="#334155" stroke-width="1" />
-            <circle cx="413" cy="111" r="3" fill="#2dd4bf" />
-            <rect x="422" y="106" width="35" height="3" rx="1" fill="#64748b" />
-            <rect x="422" y="114" width="25" height="3" rx="1" fill="#334155" />
-          </g>
-          <g>
-            <rect x="400" y="160" width="72" height="32" rx="4"
-              fill="#1a2234" stroke="#334155" stroke-width="1" />
-            <circle cx="413" cy="176" r="3" fill="#2dd4bf" />
-            <rect x="422" y="171" width="35" height="3" rx="1" fill="#64748b" />
-            <rect x="422" y="179" width="25" height="3" rx="1" fill="#334155" />
-          </g>
-          <g>
-            <rect x="400" y="225" width="72" height="32" rx="4"
-              fill="#1a2234" stroke="#334155" stroke-width="1" />
-            <circle cx="413" cy="241" r="3" fill="#2dd4bf" />
-            <rect x="422" y="236" width="35" height="3" rx="1" fill="#64748b" />
-            <rect x="422" y="244" width="25" height="3" rx="1" fill="#334155" />
-          </g>
-          <g>
-            <rect x="400" y="290" width="72" height="32" rx="4"
-              fill="#1a2234" stroke="#334155" stroke-width="1" />
-            <circle cx="413" cy="306" r="3" fill="#2dd4bf" />
-            <rect x="422" y="301" width="35" height="3" rx="1" fill="#64748b" />
-            <rect x="422" y="309" width="25" height="3" rx="1" fill="#334155" />
-          </g>
-        </svg>
+    <div class="container hero-inner">
+      <div class="hero-tag">Synthetic data, honestly built</div>
+      <h1>
+        Synthetic UK primary-care data
+        <span class="accent-text">you can defend.</span>
+      </h1>
+      <p class="hero-lead">
+        Rhysora generates realistic, fully-synthetic patient records for research,
+        testing, and methodology development. Every value traces to a published
+        source. Every dataset is reproducible by anyone with the same settings.
+      </p>
+      <div class="hero-actions">
+        <a href="/products" class="btn">See the data →</a>
+        <a href="/methodology" class="btn btn-ghost">How it works</a>
       </div>
     </div>
   </section>
@@ -244,23 +159,9 @@ import Base from '../layouts/Base.astro';
     pointer-events: none;
   }
 
-  .hero-layout {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-12);
-    align-items: center;
-  }
-
-  @media (min-width: 960px) {
-    .hero-layout {
-      grid-template-columns: 1.15fr 1fr;
-      gap: var(--space-16);
-    }
-  }
-
   .hero-inner {
-    max-width: 640px;
+    position: relative;
+    max-width: 820px;
   }
 
   .hero-tag {
@@ -290,51 +191,6 @@ import Base from '../layouts/Base.astro';
     display: flex;
     gap: var(--space-3);
     flex-wrap: wrap;
-  }
-
-  /* Hero visual (static illustration + subtle central pulse) */
-  .hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .provenance-svg {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-  }
-
-  .provenance-svg .line {
-    stroke: rgba(255, 255, 255, 0.15);
-    stroke-width: 1;
-  }
-
-  .provenance-svg .central-halo {
-    opacity: 0.15;
-    filter: blur(8px);
-    transform-origin: 250px 200px;
-    animation: central-halo-pulse 3.5s ease-in-out infinite;
-  }
-
-  @keyframes central-halo-pulse {
-    0%, 100% {
-      opacity: 0.1;
-      transform: scale(0.95);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(1.05);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .provenance-svg .central-halo {
-      animation: none;
-      opacity: 0.2;
-    }
   }
 
   /* Section labels */
