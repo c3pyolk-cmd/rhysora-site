@@ -1,0 +1,164 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Methodology | Rhysora"
+  description="How Rhysora ensures every synthetic data value is trustworthy, sourced, and reproducible."
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">Methodology</div>
+      <h1>How we ensure Rhysora's synthetic data is trustworthy.</h1>
+    </div>
+  </section>
+
+  <section class="methodology-body">
+    <div class="container prose">
+      <p class="lead">
+        Synthetic data has a credibility problem. Most tools in this space
+        generate values from statistical distributions with no record of where
+        those values came from. When a reviewer asks "where did this figure
+        come from?", the honest answer is often "the model made it up."
+      </p>
+
+      <p class="lead"><strong>Rhysora is built differently.</strong></p>
+
+      <div class="principle">
+        <h2>Every value is sourced.</h2>
+        <p>
+          Clinical thresholds, drug doses, reference ranges, prescribing
+          patterns, mortality rates, regional prevalences. All traceable to
+          published sources: NICE guidelines, the British National Formulary,
+          ONS statistics, NHS published datasets, and the peer-reviewed
+          pharmacoepidemiology literature. Values we cannot source are flagged
+          as estimates. Nothing is invented.
+        </p>
+      </div>
+
+      <div class="principle">
+        <h2>Output is reproducible.</h2>
+        <p>
+          Run Rhysora twice with the same settings, on any computer, and you get
+          the exact same dataset. A colleague running it on their machine can
+          reproduce your work perfectly from the settings alone. This matters
+          because your findings can be independently verified by anyone.
+        </p>
+      </div>
+
+      <div class="principle">
+        <h2>Adversarial review is continuous.</h2>
+        <p>
+          Rhysora outputs are routinely audited against published standards,
+          including pharmacoepidemiology best practice and NICE reference case
+          methods. Findings are logged, triaged, and addressed in versioned
+          releases.
+        </p>
+      </div>
+
+      <div class="caveat">
+        <h2>Caveat</h2>
+        <p>
+          Rhysora is synthetic data. It is not real patient data and is not a
+          substitute for studies that require real patient data. It is suitable
+          for methodology development, pre-study planning, education, EHR
+          testing, and research where synthetic cohorts are explicitly
+          acceptable. It is not suitable as a substitute for real-world
+          evidence where regulators require real data.
+        </p>
+      </div>
+
+      <div class="cta-block">
+        <h3>Want to see this in practice?</h3>
+        <p>
+          Get in touch for a walkthrough of the methodology and a sample extract.
+        </p>
+        <a href="/contact" class="btn">Contact us →</a>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-hero h1 {
+    max-width: 780px;
+  }
+
+  .methodology-body {
+    padding: var(--space-16) 0;
+  }
+
+  .prose .lead {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--fg-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  .prose .lead strong {
+    color: var(--fg);
+  }
+
+  .principle {
+    padding: var(--space-8) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .principle:last-of-type {
+    border-bottom: none;
+  }
+
+  .principle h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-3);
+    color: var(--accent);
+  }
+
+  .principle p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .caveat {
+    margin-top: var(--space-12);
+    padding: var(--space-8);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+  }
+
+  .caveat h2 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-3);
+    color: var(--fg);
+  }
+
+  .caveat p {
+    color: var(--fg-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .cta-block {
+    margin-top: var(--space-16);
+    padding: var(--space-8);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .cta-block h3 {
+    margin-top: 0;
+  }
+
+  .cta-block p {
+    margin-bottom: var(--space-6);
+  }
+</style>

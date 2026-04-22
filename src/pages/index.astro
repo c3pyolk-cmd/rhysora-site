@@ -1,0 +1,356 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Rhysora — Trustworthy synthetic UK primary-care data">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-tag">Synthetic data, honestly built</div>
+      <h1>
+        Synthetic UK primary-care data
+        <span class="accent-text">you can defend.</span>
+      </h1>
+      <p class="hero-lead">
+        Rhysora generates realistic, fully-synthetic patient records for research,
+        testing, and methodology development. Every value traces to a published
+        source. Every dataset is reproducible by anyone with the same settings.
+      </p>
+      <div class="hero-actions">
+        <a href="/products" class="btn">See the data →</a>
+        <a href="/methodology" class="btn btn-ghost">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The problem -->
+  <section class="problem">
+    <div class="container">
+      <div class="section-label">The problem</div>
+      <h2>Most synthetic data can't be defended.</h2>
+      <div class="problem-grid">
+        <div class="problem-item">
+          <div class="problem-number">01</div>
+          <h3>Unsourced values</h3>
+          <p>
+            When a reviewer asks where a figure came from, the honest answer is
+            often "the model made it up."
+          </p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-number">02</div>
+          <h3>Non-reproducible</h3>
+          <p>
+            Most tools can't regenerate the same dataset twice. Research built
+            on them isn't independently verifiable.
+          </p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-number">03</div>
+          <h3>No external audit</h3>
+          <p>
+            Quality claims without adversarial review are marketing. Without
+            continuous scrutiny, errors accumulate silently.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The answer -->
+  <section class="answer">
+    <div class="container">
+      <div class="section-label">How Rhysora is different</div>
+      <h2>Built for scrutiny.</h2>
+      <div class="answer-grid">
+        <div class="answer-card reveal">
+          <div class="answer-icon">◈</div>
+          <h3>Every value sourced</h3>
+          <p>
+            Clinical thresholds, drug doses, prescribing patterns, mortality
+            rates. All traceable to published sources. Nothing is invented.
+          </p>
+        </div>
+        <div class="answer-card reveal">
+          <div class="answer-icon">◊</div>
+          <h3>Fully reproducible</h3>
+          <p>
+            Run Rhysora twice with the same settings and get the exact same
+            dataset. Every run, every computer. Your work is verifiable by
+            anyone.
+          </p>
+        </div>
+        <div class="answer-card reveal">
+          <div class="answer-icon">◇</div>
+          <h3>Continuously audited</h3>
+          <p>
+            Outputs are routinely reviewed against published pharmacoepidemiology
+            standards. Findings are logged, triaged, and resolved in versioned
+            releases.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product callout -->
+  <section class="product-callout">
+    <div class="container">
+      <div class="callout-inner">
+        <div>
+          <div class="section-label">Available now</div>
+          <h2>Practice Extract</h2>
+          <p class="callout-lead">
+            Realistic synthetic patient cohorts in the standard UK primary-care
+            research format. Any size, any location, any reference date.
+            Reproducible by seed.
+          </p>
+          <a href="/products" class="btn">Learn more →</a>
+        </div>
+        <div class="callout-visual">
+          <div class="mock-extract">
+            <div class="mock-header">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-title">practice_extract.tsv</span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-line"><span class="mono subtle">patid</span><span class="mono muted">pracid</span><span class="mono muted">gender</span><span class="mono muted">yob</span></div>
+              <div class="mock-line"><span class="mono">1029341</span><span class="mono">8241</span><span class="mono">F</span><span class="mono">1967</span></div>
+              <div class="mock-line"><span class="mono">1029342</span><span class="mono">8241</span><span class="mono">M</span><span class="mono">1954</span></div>
+              <div class="mock-line"><span class="mono">1029343</span><span class="mono">8241</span><span class="mono">F</span><span class="mono">1983</span></div>
+              <div class="mock-line"><span class="mono">1029344</span><span class="mono">8241</span><span class="mono">M</span><span class="mono">1971</span></div>
+              <div class="mock-line mock-dim"><span class="mono subtle">...</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Building something that needs trustworthy synthetic data?</h2>
+      <p class="muted">Get in touch. We respond personally.</p>
+      <a href="/contact" class="btn">Contact us →</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: var(--space-24) 0 var(--space-16);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, var(--accent-glow) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    max-width: 820px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero h1 {
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-lead {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--fg-muted);
+    margin-bottom: var(--space-8);
+    max-width: 640px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  /* Section labels */
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Problem section */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+  }
+
+  .problem-item {
+    position: relative;
+    padding-top: var(--space-6);
+  }
+
+  .problem-number {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--fg-subtle);
+    margin-bottom: var(--space-3);
+  }
+
+  /* Answer section */
+  .answer {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .answer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .answer-card {
+    padding: var(--space-8);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .answer-card:hover {
+    border-color: var(--accent-dim);
+    transform: translateY(-2px);
+  }
+
+  .answer-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: var(--space-4);
+  }
+
+  /* Product callout */
+  .product-callout {
+    background: var(--bg);
+  }
+
+  .callout-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .callout-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+    }
+  }
+
+  .callout-lead {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-6);
+  }
+
+  /* Mock extract visual */
+  .mock-extract {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+  }
+
+  .mock-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mock-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-strong);
+  }
+
+  .mock-title {
+    margin-left: var(--space-3);
+    color: var(--fg-muted);
+    font-size: 0.85rem;
+  }
+
+  .mock-body {
+    padding: var(--space-4);
+  }
+
+  .mock-line {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mock-line:last-child {
+    border-bottom: none;
+  }
+
+  .mock-line:first-child {
+    border-bottom: 1px solid var(--border-strong);
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-1);
+  }
+
+  .mock-dim {
+    opacity: 0.5;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    text-align: center;
+    padding: var(--space-24) 0;
+    background: var(--bg-elevated);
+  }
+
+  .final-cta h2 {
+    margin-bottom: var(--space-4);
+  }
+
+  .final-cta p {
+    margin: 0 auto var(--space-8);
+  }
+</style>

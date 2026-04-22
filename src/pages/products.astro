@@ -1,0 +1,203 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Practice Extract | Rhysora"
+  description="Realistic synthetic UK primary-care patient cohorts. Any size, fully reproducible."
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">Product</div>
+      <h1>Practice Extract</h1>
+      <p class="page-lead">
+        Realistic, fully-synthetic patient cohorts in the standard UK primary-care
+        research format. Delivered as ten linked tables covering demographics,
+        clinical events, prescriptions, tests, and consultations.
+      </p>
+    </div>
+  </section>
+
+  <section class="product-detail">
+    <div class="container prose">
+      <h2>What you get</h2>
+      <p>
+        A complete synthetic patient population sized to your needs. Each patient
+        has a realistic medical history: demographics and registration details,
+        consultations over time, prescriptions with BNF codes, lab tests with
+        reference ranges and results, referrals, immunisations, clinical notes
+        with SNOMED coding, and family history where relevant.
+      </p>
+      <p>
+        Delivered in the standard UK primary-care research format used by CPRD
+        and similar databases. Ten linked tables covering demographics, clinical
+        events, prescriptions, tests, and consultations.
+      </p>
+
+      <h3>You choose</h3>
+      <ul class="feature-list">
+        <li><strong>Cohort size.</strong> From ten patients to hundreds of thousands.</li>
+        <li><strong>UK location.</strong> Any region. Demographics and prescribing patterns reflect local profiles.</li>
+        <li><strong>Reference date.</strong> Any study period. Patients age realistically around it.</li>
+        <li><strong>Data shape.</strong> Clean research-ready or realistic real-world-EHR messiness.</li>
+      </ul>
+
+      <h3>How it's delivered</h3>
+      <p>
+        Tab-separated files in the standard schema. Ready to load into R, Stata,
+        SAS, Python, or any database. No proprietary viewer required.
+      </p>
+
+      <h2>Who uses it</h2>
+      <div class="use-cases">
+        <div class="use-case">
+          <h3>Academic research</h3>
+          <p>
+            Prototype study designs before committing to real-data access
+            applications. Validate analysis pipelines on known-shape data.
+          </p>
+        </div>
+        <div class="use-case">
+          <h3>Pharma HEOR</h3>
+          <p>
+            Build evidence synthesis pipelines and analytic frameworks. Develop
+            and stress-test methodology ahead of real-data deployment.
+          </p>
+        </div>
+        <div class="use-case">
+          <h3>EHR vendors</h3>
+          <p>
+            Test products against realistic messy data. Run demonstrations and
+            training without patient-data access constraints.
+          </p>
+        </div>
+        <div class="use-case">
+          <h3>Teaching and training</h3>
+          <p>
+            Educational datasets for epidemiology, biostatistics, and health
+            informatics courses. No approvals, no risk.
+          </p>
+        </div>
+      </div>
+
+      <h2>Why Rhysora</h2>
+      <p>
+        Every value in every record traces back to a published source.
+        NICE guidelines, British National Formulary, ONS data, NHS datasets,
+        and the pharmacoepidemiology literature.
+      </p>
+      <p>
+        Every run is reproducible. The same settings produce the exact same
+        dataset on any computer. Findings built on Rhysora data can be
+        independently verified.
+      </p>
+      <p>
+        Outputs are continuously reviewed against published standards.
+        <a href="/methodology">Read more about our methodology →</a>
+      </p>
+
+      <div class="cta-block">
+        <h3>Ready to talk?</h3>
+        <p>
+          We respond personally to every enquiry. Tell us about your use case
+          and we'll scope a pilot.
+        </p>
+        <a href="/contact" class="btn">Get in touch →</a>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-hero h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .page-lead {
+    font-size: 1.2rem;
+    color: var(--fg-muted);
+    max-width: 720px;
+  }
+
+  .product-detail {
+    padding: var(--space-16) 0;
+  }
+
+  .prose h2 {
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-4);
+  }
+
+  .prose h2:first-child {
+    margin-top: 0;
+  }
+
+  .prose h3 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0;
+  }
+
+  .feature-list li {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--fg-muted);
+    line-height: 1.55;
+  }
+
+  .feature-list li:last-child {
+    border-bottom: none;
+  }
+
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-6) 0;
+  }
+
+  .use-case {
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .use-case h3 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 1.05rem;
+  }
+
+  .use-case p {
+    font-size: 0.95rem;
+  }
+
+  .cta-block {
+    margin-top: var(--space-16);
+    padding: var(--space-8);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .cta-block h3 {
+    margin-top: 0;
+  }
+
+  .cta-block p {
+    margin-bottom: var(--space-6);
+  }
+</style>

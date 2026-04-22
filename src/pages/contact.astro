@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Contact | Rhysora"
+  description="Get in touch. We respond personally to every enquiry."
+>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h1>Get in touch.</h1>
+      <p class="lead">
+        We respond personally to every enquiry. Tell us about your use case and
+        we'll help you scope the right approach.
+      </p>
+
+      <div class="contact-card">
+        <div class="contact-label">Email</div>
+        <a href="mailto:info@rhysora.com" class="contact-email">info@rhysora.com</a>
+      </div>
+
+      <div class="contact-notes">
+        <h3>Good things to include in your email</h3>
+        <ul>
+          <li>What you're trying to build, test, or study</li>
+          <li>Who you are (researcher, pharma, EHR vendor, educator, other)</li>
+          <li>Rough scale (how many patients, what time period)</li>
+          <li>Timeline, if you have one</li>
+        </ul>
+        <p class="muted">
+          Not sure if Rhysora fits your use case? Email anyway. We'll tell you
+          honestly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .contact-section {
+    padding: var(--space-16) 0 var(--space-24);
+  }
+
+  .contact-section h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    color: var(--fg-muted);
+    max-width: 640px;
+    margin-bottom: var(--space-12);
+  }
+
+  .contact-card {
+    padding: var(--space-8);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    max-width: 480px;
+    margin-bottom: var(--space-12);
+  }
+
+  .contact-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--fg-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-3);
+  }
+
+  .contact-email {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .contact-notes {
+    max-width: 640px;
+  }
+
+  .contact-notes h3 {
+    margin-bottom: var(--space-4);
+  }
+
+  .contact-notes ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-6);
+  }
+
+  .contact-notes li {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--fg-muted);
+    padding-left: var(--space-6);
+    position: relative;
+  }
+
+  .contact-notes li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .contact-notes li:last-child {
+    border-bottom: none;
+  }
+</style>
