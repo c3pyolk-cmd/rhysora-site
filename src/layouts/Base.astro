@@ -18,7 +18,10 @@ const {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
-  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,6 +112,7 @@ const {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--space-6);
     padding: var(--space-4) var(--space-6);
   }
 
@@ -119,6 +123,7 @@ const {
     color: var(--fg);
     font-weight: 600;
     font-size: 1.05rem;
+    flex-shrink: 0;
   }
 
   .brand:hover {
@@ -147,13 +152,15 @@ const {
 
   nav {
     display: flex;
-    gap: var(--space-6);
+    gap: var(--space-5);
+    flex-wrap: nowrap;
   }
 
   nav a {
     color: var(--fg-muted);
     font-size: 0.95rem;
     font-weight: 500;
+    white-space: nowrap;
   }
 
   nav a:hover {
@@ -162,11 +169,31 @@ const {
   }
 
   @media (max-width: 640px) {
+    .header-inner {
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .brand span:last-child {
+      display: none;
+    }
+
     nav {
       gap: var(--space-4);
     }
+
     nav a {
-      font-size: 0.875rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    nav {
+      gap: var(--space-3);
+    }
+
+    nav a {
+      font-size: 0.8rem;
     }
   }
 
