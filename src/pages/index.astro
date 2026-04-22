@@ -7,20 +7,134 @@ import Base from '../layouts/Base.astro';
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
-    <div class="container hero-inner">
-      <div class="hero-tag">Synthetic data, honestly built</div>
-      <h1>
-        Synthetic UK primary-care data
-        <span class="accent-text">you can defend.</span>
-      </h1>
-      <p class="hero-lead">
-        Rhysora generates realistic, fully-synthetic patient records for research,
-        testing, and methodology development. Every value traces to a published
-        source. Every dataset is reproducible by anyone with the same settings.
-      </p>
-      <div class="hero-actions">
-        <a href="/products" class="btn">See the data →</a>
-        <a href="/methodology" class="btn btn-ghost">How it works</a>
+    <div class="container hero-layout">
+      <div class="hero-inner">
+        <div class="hero-tag">Synthetic data, honestly built</div>
+        <h1>
+          Synthetic UK primary-care data
+          <span class="accent-text">you can defend.</span>
+        </h1>
+        <p class="hero-lead">
+          Rhysora generates realistic, fully-synthetic patient records for research,
+          testing, and methodology development. Every value traces to a published
+          source. Every dataset is reproducible by anyone with the same settings.
+        </p>
+        <div class="hero-actions">
+          <a href="/products" class="btn">See the data →</a>
+          <a href="/methodology" class="btn btn-ghost">How it works</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="provenance-svg">
+          <!-- Defs: hexagon shape -->
+          <defs>
+            <symbol id="hex" viewBox="-20 -20 40 40">
+              <polygon points="0,-18 15.5,-9 15.5,9 0,18 -15.5,9 -15.5,-9"
+                fill="currentColor" />
+            </symbol>
+            <symbol id="hex-outline" viewBox="-20 -20 40 40">
+              <polygon points="0,-18 15.5,-9 15.5,9 0,18 -15.5,9 -15.5,-9"
+                fill="none" stroke="currentColor" stroke-width="2" />
+            </symbol>
+          </defs>
+
+          <!-- Connection lines: sources to centre -->
+          <line x1="85" y1="90" x2="240" y2="200" class="line" />
+          <line x1="85" y1="200" x2="240" y2="200" class="line" />
+          <line x1="85" y1="310" x2="240" y2="200" class="line" />
+
+          <!-- Connection lines: centre to outputs -->
+          <line x1="260" y1="200" x2="415" y2="110" class="line" />
+          <line x1="260" y1="200" x2="415" y2="175" class="line" />
+          <line x1="260" y1="200" x2="415" y2="240" class="line" />
+          <line x1="260" y1="200" x2="415" y2="305" class="line" />
+
+          <!-- Source hexagons (left) -->
+          <g class="source-node" style="color: #64748b;">
+            <use href="#hex" x="70" y="90" />
+          </g>
+          <g class="source-node" style="color: #64748b;">
+            <use href="#hex" x="70" y="200" />
+          </g>
+          <g class="source-node" style="color: #64748b;">
+            <use href="#hex" x="70" y="310" />
+          </g>
+
+          <!-- Central Rhysora hexagon -->
+          <g class="central-node" style="color: #2dd4bf;">
+            <use href="#hex-outline" x="250" y="200" transform="scale(1.6)"
+              style="transform-origin: 250px 200px;" />
+            <use href="#hex" x="250" y="200" style="color: #0a0e1a;" />
+            <use href="#hex-outline" x="250" y="200" />
+          </g>
+
+          <!-- Output record cards (right) -->
+          <g class="output-node" data-index="0">
+            <rect x="400" y="95" width="70" height="32" rx="4"
+              fill="#1a2234" stroke="#334155" stroke-width="1" />
+            <circle cx="413" cy="111" r="3" fill="#475569" class="output-dot" />
+            <rect x="422" y="106" width="35" height="3" rx="1" fill="#475569" />
+            <rect x="422" y="114" width="25" height="3" rx="1" fill="#334155" />
+          </g>
+          <g class="output-node" data-index="1">
+            <rect x="400" y="160" width="70" height="32" rx="4"
+              fill="#1a2234" stroke="#334155" stroke-width="1" />
+            <circle cx="413" cy="176" r="3" fill="#475569" class="output-dot" />
+            <rect x="422" y="171" width="35" height="3" rx="1" fill="#475569" />
+            <rect x="422" y="179" width="25" height="3" rx="1" fill="#334155" />
+          </g>
+          <g class="output-node" data-index="2">
+            <rect x="400" y="225" width="70" height="32" rx="4"
+              fill="#1a2234" stroke="#334155" stroke-width="1" />
+            <circle cx="413" cy="241" r="3" fill="#475569" class="output-dot" />
+            <rect x="422" y="236" width="35" height="3" rx="1" fill="#475569" />
+            <rect x="422" y="244" width="25" height="3" rx="1" fill="#334155" />
+          </g>
+          <g class="output-node" data-index="3">
+            <rect x="400" y="290" width="70" height="32" rx="4"
+              fill="#1a2234" stroke="#334155" stroke-width="1" />
+            <circle cx="413" cy="306" r="3" fill="#475569" class="output-dot" />
+            <rect x="422" y="301" width="35" height="3" rx="1" fill="#475569" />
+            <rect x="422" y="309" width="25" height="3" rx="1" fill="#334155" />
+          </g>
+
+          <!-- Travelling pulses: sources to centre -->
+          <circle class="pulse pulse-in-1" r="4" fill="#2dd4bf" />
+          <circle class="pulse pulse-in-2" r="4" fill="#2dd4bf" />
+          <circle class="pulse pulse-in-3" r="4" fill="#2dd4bf" />
+
+          <!-- Travelling pulses: centre to outputs -->
+          <circle class="pulse pulse-out-1" r="4" fill="#2dd4bf" />
+          <circle class="pulse pulse-out-2" r="4" fill="#2dd4bf" />
+          <circle class="pulse pulse-out-3" r="4" fill="#2dd4bf" />
+          <circle class="pulse pulse-out-4" r="4" fill="#2dd4bf" />
+
+          <!-- Verification ticks (appear briefly on each output) -->
+          <g class="verify-tick" data-index="0">
+            <circle cx="455" cy="111" r="7" fill="#2dd4bf" />
+            <path d="M 452 111 L 454 113 L 458 109" stroke="#0a0e1a"
+              stroke-width="1.5" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+          <g class="verify-tick" data-index="1">
+            <circle cx="455" cy="176" r="7" fill="#2dd4bf" />
+            <path d="M 452 176 L 454 178 L 458 174" stroke="#0a0e1a"
+              stroke-width="1.5" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+          <g class="verify-tick" data-index="2">
+            <circle cx="455" cy="241" r="7" fill="#2dd4bf" />
+            <path d="M 452 241 L 454 243 L 458 239" stroke="#0a0e1a"
+              stroke-width="1.5" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+          <g class="verify-tick" data-index="3">
+            <circle cx="455" cy="306" r="7" fill="#2dd4bf" />
+            <path d="M 452 306 L 454 308 L 458 304" stroke="#0a0e1a"
+              stroke-width="1.5" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+        </svg>
       </div>
     </div>
   </section>
@@ -159,9 +273,23 @@ import Base from '../layouts/Base.astro';
     pointer-events: none;
   }
 
-  .hero-inner {
+  .hero-layout {
     position: relative;
-    max-width: 820px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .hero-layout {
+      grid-template-columns: 1.15fr 1fr;
+      gap: var(--space-16);
+    }
+  }
+
+  .hero-inner {
+    max-width: 640px;
   }
 
   .hero-tag {
@@ -191,6 +319,175 @@ import Base from '../layouts/Base.astro';
     display: flex;
     gap: var(--space-3);
     flex-wrap: wrap;
+  }
+
+  /* Hero visual (animated SVG) */
+  .hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .provenance-svg {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .provenance-svg .line {
+    stroke: rgba(255, 255, 255, 0.12);
+    stroke-width: 1;
+  }
+
+  .provenance-svg .source-node,
+  .provenance-svg .output-node,
+  .provenance-svg .central-node {
+    transition: opacity 0.3s ease;
+  }
+
+  .provenance-svg .verify-tick {
+    opacity: 0;
+  }
+
+  /* Pulse dots (initially invisible; keyframes control visibility) */
+  .provenance-svg .pulse {
+    opacity: 0;
+  }
+
+  /* Animation: each pulse travels along its line, staggered */
+  @keyframes pulse-travel-1 {
+    0%, 100% { opacity: 0; }
+    2% { opacity: 1; }
+    18% { opacity: 1; }
+    20% { opacity: 0; }
+    0% { cx: 85; cy: 90; }
+    20% { cx: 240; cy: 200; }
+    100% { cx: 240; cy: 200; }
+  }
+  @keyframes pulse-travel-2 {
+    0%, 100% { opacity: 0; }
+    5% { opacity: 1; }
+    21% { opacity: 1; }
+    23% { opacity: 0; }
+    0% { cx: 85; cy: 200; }
+    23% { cx: 240; cy: 200; }
+    100% { cx: 240; cy: 200; }
+  }
+  @keyframes pulse-travel-3 {
+    0%, 100% { opacity: 0; }
+    8% { opacity: 1; }
+    24% { opacity: 1; }
+    26% { opacity: 0; }
+    0% { cx: 85; cy: 310; }
+    26% { cx: 240; cy: 200; }
+    100% { cx: 240; cy: 200; }
+  }
+
+  @keyframes pulse-travel-out-1 {
+    0%, 32%, 100% { opacity: 0; }
+    34% { opacity: 1; }
+    48% { opacity: 1; }
+    50% { opacity: 0; }
+    32% { cx: 260; cy: 200; }
+    50% { cx: 415; cy: 110; }
+    100% { cx: 415; cy: 110; }
+  }
+  @keyframes pulse-travel-out-2 {
+    0%, 36%, 100% { opacity: 0; }
+    38% { opacity: 1; }
+    52% { opacity: 1; }
+    54% { opacity: 0; }
+    36% { cx: 260; cy: 200; }
+    54% { cx: 415; cy: 175; }
+    100% { cx: 415; cy: 175; }
+  }
+  @keyframes pulse-travel-out-3 {
+    0%, 40%, 100% { opacity: 0; }
+    42% { opacity: 1; }
+    56% { opacity: 1; }
+    58% { opacity: 0; }
+    40% { cx: 260; cy: 200; }
+    58% { cx: 415; cy: 240; }
+    100% { cx: 415; cy: 240; }
+  }
+  @keyframes pulse-travel-out-4 {
+    0%, 44%, 100% { opacity: 0; }
+    46% { opacity: 1; }
+    60% { opacity: 1; }
+    62% { opacity: 0; }
+    44% { cx: 260; cy: 200; }
+    62% { cx: 415; cy: 305; }
+    100% { cx: 415; cy: 305; }
+  }
+
+  .provenance-svg .pulse-in-1 {
+    animation: pulse-travel-1 10s linear infinite;
+  }
+  .provenance-svg .pulse-in-2 {
+    animation: pulse-travel-2 10s linear infinite;
+  }
+  .provenance-svg .pulse-in-3 {
+    animation: pulse-travel-3 10s linear infinite;
+  }
+  .provenance-svg .pulse-out-1 {
+    animation: pulse-travel-out-1 10s linear infinite;
+  }
+  .provenance-svg .pulse-out-2 {
+    animation: pulse-travel-out-2 10s linear infinite;
+  }
+  .provenance-svg .pulse-out-3 {
+    animation: pulse-travel-out-3 10s linear infinite;
+  }
+  .provenance-svg .pulse-out-4 {
+    animation: pulse-travel-out-4 10s linear infinite;
+  }
+
+  /* Central hex pulse */
+  @keyframes central-pulse {
+    0%, 20%, 100% {
+      filter: drop-shadow(0 0 0 rgba(45, 212, 191, 0));
+    }
+    25%, 32% {
+      filter: drop-shadow(0 0 12px rgba(45, 212, 191, 0.6));
+    }
+  }
+
+  .provenance-svg .central-node {
+    animation: central-pulse 10s ease-in-out infinite;
+  }
+
+  /* Verify tick appears on each output card */
+  @keyframes verify-tick-appear {
+    0%, 50% { opacity: 0; transform: scale(0.5); }
+    54% { opacity: 1; transform: scale(1.1); }
+    60% { transform: scale(1); }
+    85% { opacity: 1; }
+    90%, 100% { opacity: 0; }
+  }
+
+  .provenance-svg .verify-tick {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: verify-tick-appear 10s ease-in-out infinite;
+  }
+
+  .provenance-svg .verify-tick[data-index="0"] { animation-delay: 0s; }
+  .provenance-svg .verify-tick[data-index="1"] { animation-delay: 0.2s; }
+  .provenance-svg .verify-tick[data-index="2"] { animation-delay: 0.4s; }
+  .provenance-svg .verify-tick[data-index="3"] { animation-delay: 0.6s; }
+
+  /* Reduced motion: static layout, no animation */
+  @media (prefers-reduced-motion: reduce) {
+    .provenance-svg .pulse,
+    .provenance-svg .central-node,
+    .provenance-svg .verify-tick {
+      animation: none;
+    }
+    .provenance-svg .verify-tick {
+      opacity: 1;
+    }
   }
 
   /* Section labels */
