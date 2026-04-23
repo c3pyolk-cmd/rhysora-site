@@ -63,20 +63,33 @@ const {
     <slot />
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
-      <div>
+      <div class="footer-brand">
         <img src="/logo.png" alt="Rhysora" class="brand-logo" />
         <span>Rhysora</span>
       </div>
-      <div class="footer-links">
+
+      <p class="footer-disclaimer">
+        Rhysora is synthetic data. Not real patient data. Not a substitute
+        for real-world evidence where regulators require real data.
+      </p>
+
+      <nav class="footer-nav">
+        <a href="/">Home</a>
         <a href="/products">Products</a>
         <a href="/methodology">Methodology</a>
         <a href="/contact">Contact</a>
-      </div>
-      <div class="footer-note">
-        &copy; 2026 Rhysora. Synthetic data for UK primary care research.
-      </div>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+
+      <p class="footer-company">
+        Wilrhys Limited · Company No. 15731165 · Registered in England and Wales
+        · Stevenage, Hertfordshire
+      </p>
+
+      <p class="footer-copyright">© 2026 Wilrhys Limited. All rights reserved.</p>
     </div>
   </footer>
 
@@ -200,48 +213,72 @@ const {
     }
   }
 
-  .site-footer {
+  .footer {
     border-top: 1px solid var(--border);
-    padding: var(--space-12) 0;
-    margin-top: var(--space-24);
+    padding: 48px 0 32px;
+    margin-top: 80px;
   }
 
   .footer-inner {
     display: flex;
     flex-direction: column;
-    gap: var(--space-6);
-    color: var(--fg-subtle);
-    font-size: 0.9rem;
+    gap: 20px;
+    align-items: flex-start;
   }
 
-  .footer-inner > div:first-child {
+  .footer-brand {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    gap: 8px;
     color: var(--fg);
     font-weight: 600;
+    font-size: 1.05rem;
   }
 
-  .footer-links {
-    display: flex;
-    gap: var(--space-6);
-  }
-
-  .footer-links a {
+  .footer-disclaimer {
     color: var(--fg-muted);
     font-size: 0.9rem;
+    line-height: 1.55;
+    max-width: 720px;
+    margin: 0;
   }
 
-  .footer-note {
-    color: var(--fg-subtle);
-    font-size: 0.85rem;
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 8px;
   }
 
-  @media (min-width: 640px) {
+  .footer-nav a {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .footer-nav a:hover {
+    color: var(--fg);
+  }
+
+  .footer-company,
+  .footer-copyright {
+    color: var(--fg-muted);
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .footer-company {
+    margin-top: 8px;
+  }
+
+  @media (max-width: 640px) {
     .footer-inner {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-nav {
+      gap: 14px;
     }
   }
 </style>

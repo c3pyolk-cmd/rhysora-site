@@ -31,8 +31,9 @@ import Base from '../layouts/Base.astro';
         <p>
           Clinical thresholds, drug doses, reference ranges, prescribing
           patterns, mortality rates, regional prevalences. All traceable to
-          published sources: NICE guidelines, the British National Formulary,
-          ONS statistics, NHS published datasets, and the peer-reviewed
+          published sources: NICE guidelines, NHS dm+d (Dictionary of Medicines
+          and Devices), MHRA Summaries of Product Characteristics, ONS
+          statistics, NHSBSA open prescribing data, and the peer-reviewed
           pharmacoepidemiology literature. Values we cannot source are flagged
           as estimates. Nothing is invented.
         </p>
@@ -49,7 +50,7 @@ import Base from '../layouts/Base.astro';
       </div>
 
       <div class="principle">
-        <h2>Adversarial review is continuous.</h2>
+        <h2>Adversarial review is routine.</h2>
         <p>
           Rhysora outputs are routinely audited against published standards,
           including pharmacoepidemiology best practice and NICE reference case
@@ -70,6 +71,15 @@ import Base from '../layouts/Base.astro';
         </p>
       </div>
 
+      <div class="principle">
+        <h2>Independence</h2>
+        <p>
+          CPRD is a research service of the Medicines and Healthcare products
+          Regulatory Agency. Rhysora is independent and not affiliated with,
+          endorsed by, or a substitute for CPRD.
+        </p>
+      </div>
+
       <div class="cta-block">
         <h3>Want to see this in practice?</h3>
         <p>
@@ -84,11 +94,6 @@ import Base from '../layouts/Base.astro';
 </Base>
 
 <style>
-  .page-hero {
-    padding: var(--space-16) 0 var(--space-12);
-    border-bottom: 1px solid var(--border);
-  }
-
   .page-hero h1 {
     max-width: 780px;
   }

@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base
-  title="Practice Extract — Synthetic CPRD-format patient cohorts | Rhysora"
+  title="Practice Extract — Synthetic UK primary-care cohorts | Rhysora"
   description="Synthetic UK primary care patient cohorts in CPRD-compatible format. Any size, any location, fully reproducible by seed. For research, pharma HEOR, EHR testing."
 >
 
@@ -16,6 +16,19 @@ import Base from '../layouts/Base.astro';
         research format. Delivered as ten linked tables covering demographics,
         clinical events, prescriptions, tests, and consultations.
       </p>
+    </div>
+  </section>
+
+  <section class="product-caveat">
+    <div class="container">
+      <div class="caveat-box">
+        <p>
+          Rhysora Practice Extract is synthetic data generated from published
+          sources. It contains no real patient data and is not clinical data.
+          It must not be used to inform decisions about real patients or as
+          real-world evidence where regulators require real data.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -113,19 +126,24 @@ import Base from '../layouts/Base.astro';
 </Base>
 
 <style>
-  .page-hero {
-    padding: var(--space-16) 0 var(--space-12);
-    border-bottom: 1px solid var(--border);
+  .product-caveat {
+    padding: 24px 0 0;
   }
 
-  .page-hero h1 {
-    margin-bottom: var(--space-4);
-  }
-
-  .page-lead {
-    font-size: 1.2rem;
-    color: var(--fg-muted);
+  .caveat-box {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    padding: 16px 20px;
+    border-radius: 6px;
     max-width: 720px;
+  }
+
+  .caveat-box p {
+    color: var(--fg-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0;
   }
 
   .product-detail {
