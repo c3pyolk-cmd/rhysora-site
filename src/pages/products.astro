@@ -32,6 +32,33 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <section class="compare-section">
+    <div class="container">
+      <div class="prose">
+        <h2>How Rhysora compares to CPRD synthetic data</h2>
+        <p>
+          CPRD's synthetic datasets are derived from anonymised real
+          patient data. Access requires a non-negotiable Data Sharing
+          Agreement with MHRA — typically weeks of procurement before
+          the first download.
+        </p>
+        <p>
+          Rhysora is generated from published reference sources alone.
+          No real patient data is used at any stage, so there is nothing
+          to anonymise and no Data Sharing Agreement to sign. For
+          methodology development, EHR testing, training, and early
+          research prototyping, this means a licence conversation
+          instead of a regulatory process.
+        </p>
+        <p>
+          Rhysora is not a replacement for CPRD where real-data evidence
+          is needed. For regulatory submissions that require real-world
+          data, CPRD remains the appropriate route.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="product-detail">
     <div class="container">
       <div class="prose">
@@ -144,6 +171,19 @@ import Base from '../layouts/Base.astro';
     font-size: 0.95rem;
     line-height: 1.55;
     margin: 0;
+  }
+
+  .compare-section {
+    padding: var(--space-16) 0 var(--space-8);
+  }
+
+  .compare-section .prose h2 {
+    margin-bottom: var(--space-4);
+  }
+
+  .compare-section .prose p {
+    color: var(--fg-muted);
+    line-height: 1.65;
   }
 
   .product-detail {
