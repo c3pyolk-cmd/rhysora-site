@@ -367,7 +367,7 @@ import Base from '../layouts/Base.astro';
     padding: var(--space-4);
   }
 
-  .mock-line {
+  :global(.mock-line) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-3);
@@ -393,24 +393,24 @@ import Base from '../layouts/Base.astro';
     flex-direction: column;
   }
 
-  .mock-track .mock-line {
+  :global(.mock-track .mock-line) {
     border-bottom: 1px solid var(--border);
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.45s ease, transform 0.45s ease;
   }
-  .mock-track .mock-line.enter {
+  :global(.mock-track .mock-line.enter) {
     opacity: 0;
     transform: translateY(8px);
   }
 
-  .mock-track .mock-line.flash .mono {
+  :global(.mock-track .mock-line.flash .mono) {
     color: var(--accent);
     transition: color 1.4s ease;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .mock-track .mock-line { animation: none; opacity: 1; }
+    :global(.mock-track .mock-line) { animation: none; opacity: 1; }
   }
 
   .mock-dim {
@@ -448,7 +448,7 @@ import Base from '../layouts/Base.astro';
     50%      { opacity: 0.65; }
   }
 
-  .hex-trace {
+  :global(.hex-trace) {
     fill: none;
     stroke: #5eead4;
     stroke-width: 1.6;
@@ -459,7 +459,7 @@ import Base from '../layouts/Base.astro';
 
   @media (prefers-reduced-motion: reduce) {
     .hex-accent polygon { animation: none; }
-    .hex-trace { display: none; }
+    :global(.hex-trace) { display: none; }
   }
 </style>
 
